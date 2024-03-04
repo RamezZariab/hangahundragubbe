@@ -13,7 +13,7 @@ def play ():
 
 #orden som kan väljas
 def ordet ():
-    ord = ["python", "sushi", "Hangman", "Super Mario", "TV kontroll", "pq formeln", ]
+    ord = ["python", "ramez", "hangman", "dator", "stol", "ryan", ]
     return random.choice(ord).lower()
 def spelet ():
     #kalla välkommen funktionen för att börja spelet
