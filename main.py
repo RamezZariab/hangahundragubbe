@@ -1,6 +1,4 @@
 import random
-
-
 def välkommen ():
     print("Välkommen")
 def play ():
@@ -9,7 +7,7 @@ def play ():
     if fråga in ("Y", "Yes", "y", "yes", "YES"):
         print("Bazinga!") and spelet()
     else:
-        ("Womp Womp")
+        print("Womp Womp")
 
 #orden som kan väljas
 def ordet ():
@@ -23,7 +21,7 @@ def spelet ():
     word = ordet()
     #Tom lista för gissade bokstäver
     gissade_bokstäver = []
-    försök = 11
+    försök = 7
     #Ställ in första gissning som False
     gissning = False
     print()
