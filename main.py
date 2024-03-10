@@ -55,6 +55,8 @@ def spelet ():
         elif len(guess) != len(gissade_bokstäver):
             print("Längden på ditt gissade ord matchar inte med antal bokstäver i ordet")
             försök -=1
+        if guess in word:
+            gissade_bokstäver.append(guess)
         status = ""
         for letter in word:
             if letter in gissade_bokstäver:
