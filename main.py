@@ -22,7 +22,9 @@ def spelet ():
     word = ordet()
     #Tom lista för gissade bokstäver
     gissade_bokstäver = []
-    försök = 8    #Ställ in första gissning som False
+    #helt enkelt antal försök spelaren har.
+    försök = 8
+    #Ställ in första gissning som False
     gissning = False
     print()
     #print ett tips antal bokstäver i ordet
@@ -51,10 +53,11 @@ def spelet ():
             else:
                 print("Du gissade tyvärr fel")
                 försök -=1
-                #Spelaren gissar ett ord men det matchar inte antal ord
+        #Spelaren gissar ett ord men det matchar inte antal ord
         elif len(guess) != len(gissade_bokstäver):
             print("Längden på ditt gissade ord matchar inte med antal bokstäver i ordet")
             försök -=1
+        #En funktion för att lägga till en gissad bokstav
         if guess in word:
             gissade_bokstäver.append(guess)
         status = ""
