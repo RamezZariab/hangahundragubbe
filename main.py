@@ -36,12 +36,15 @@ def spelet():
     gissning = False
     # print ett tips antal bokstäver i ordet
     print("Ordet har", len(word), "bokstäver")
+    #Printar den antal ord i understräck.
     print(len(word) * "_")
     while gissning == False and försök > 0:
+        #berättar hur många försök spelaren har
         print("Du har " + str(försök) + " försök")
         guess = input("Gissa en bokstav i ordet eller gissa hela ordet(inkludera ej mellanslag):").lower()
         # spelaren skriver in en bokstav
         if len(guess) == 1:
+            #Vilket svar du får beroende på vad du gissat/skrivit
             if guess not in alphabet:
                 ("Du har inte skrivit in en bokstav i det engelska alfabetet.")
             elif guess in gissade_bokstäver:
@@ -80,6 +83,7 @@ def spelet():
             else:
                 status += "_"
         print(status)
+        #bara några play again funktioner och om man lyckas gissa hela ordet via gissade bokstäver
         if status == word:
             print("Bra jobbat! Du gissade ordet!")
             fråga = input("Vill du köra igen? Y/N:")
@@ -98,5 +102,4 @@ def spelet():
             else:
                 print("Womp Womp")
                 break
-    play()
 spelet()
