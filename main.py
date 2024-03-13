@@ -103,3 +103,4 @@ def spelet():
                 print("Womp Womp")
                 break
 spelet()
+
