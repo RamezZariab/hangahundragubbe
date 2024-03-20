@@ -1,6 +1,5 @@
 import random
-
-namn = input("Hej! Vad heter du? ")
+namn = input("Hej! Vad heter du?: ")
 
 #Välkommen funktionen som välkommnar spelaren
 def välkommen():
@@ -14,7 +13,6 @@ def play():
         print("Bazinga!") and spelet()
     else:
         print("Womp Womp")
-
 
 # orden som kan väljas
 def ordet():
@@ -38,6 +36,7 @@ def spelet():
     print("Ordet har", len(word), "bokstäver")
     #Printar den antal ord i understräck.
     print(len(word) * "_")
+    # Loopar tills spelaren har gissat rätt ord eller försök är 0
     while gissning == False and försök > 0:
         #berättar hur många försök spelaren har
         print("Du har " + str(försök) + " försök")
@@ -62,10 +61,10 @@ def spelet():
                 fråga = input("Vill du köra igen? Y/N:")
                 if fråga in ("Y", "Yes", "y", "yes", "YES"):
                     print("Bazinga!")
-                    gissning = False
+                    gissning = False and spelet()
                 else:
                     print("Womp Womp")
-                    gissning = True
+                    break
             else:
                 print("Du gissade tyvärr fel")
                 försök -= 1
@@ -89,7 +88,7 @@ def spelet():
             fråga = input("Vill du köra igen? Y/N:")
             if fråga in ("Y", "Yes", "y", "yes", "YES"):
                 print("Bazinga!")
-                gissning = False
+                gissning = False and spelet()
             else:
                 print("Womp Womp")
                 break
@@ -98,7 +97,7 @@ def spelet():
             fråga = input("Vill du köra igen? Y/N:")
             if fråga in ("Y", "Yes", "y", "yes", "YES"):
                 print("Bazinga!")
-                break
+                gissning = False and spelet()
             else:
                 print("Womp Womp")
                 break
