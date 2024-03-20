@@ -7,10 +7,10 @@ def välkommen():
 
 
 def play():
-    # frågar om man vill köra igen
-    fråga = input("Vill du köra igen? Y/N:")
+    # frågar om man det var kul att spela
+    fråga = input("Var det kul att spela? Y/N:")
     if fråga in ("Y", "Yes", "y", "yes", "YES"):
-        print("Bazinga!") and spelet()
+        print("Bazinga!")
     else:
         print("Womp Womp")
 
@@ -58,10 +58,10 @@ def spelet():
         elif len(guess) == len(word):
             if guess == word:
                 print("Du gissade rätt ord! Bra jobbat!")
-                fråga = input("Vill du köra igen? Y/N:")
+                fråga = input("Var det kul att spela? Y/N:")
                 if fråga in ("Y", "Yes", "y", "yes", "YES"):
                     print("Bazinga!")
-                    gissning = False and spelet()
+                    break
                 else:
                     print("Womp Womp")
                     break
@@ -85,19 +85,19 @@ def spelet():
         #bara några play again funktioner och om man lyckas gissa hela ordet via gissade bokstäver
         if status == word:
             print("Bra jobbat! Du gissade ordet!")
-            fråga = input("Vill du köra igen? Y/N:")
+            fråga = input("Var det kul att spela? Y/N:")
             if fråga in ("Y", "Yes", "y", "yes", "YES"):
                 print("Bazinga!")
-                gissning = False and spelet()
+                break
             else:
                 print("Womp Womp")
                 break
         elif försök == 0:
             print("Du har tyvärr inga fler gissningar :(")
-            fråga = input("Vill du köra igen? Y/N:")
+            fråga = input("Var det kul att spela? Y/N:")
             if fråga in ("Y", "Yes", "y", "yes", "YES"):
                 print("Bazinga!")
-                gissning = False and spelet()
+                break
             else:
                 print("Womp Womp")
                 break
