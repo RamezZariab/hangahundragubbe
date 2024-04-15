@@ -7,7 +7,7 @@ def välkommen():
 
 
 def play():
-    # frågar om man det var kul att spela
+    # frågar om det var kul att spela
     fråga = input("Var det kul att spela? Y/N:")
     if fråga in ("Y", "Yes", "y", "yes", "YES"):
         print("Bazinga!")
@@ -19,7 +19,6 @@ def ordet():
     ord = ["python", "ramez", "hangman", "dator", "stol", "ryan", ]
     return random.choice(ord).lower()
 
-
 def spelet():
     # kalla välkommen funktionen för att börja spelet
     välkommen()
@@ -28,7 +27,7 @@ def spelet():
     word = ordet()
     # Tom lista för gissade bokstäver
     gissade_bokstäver = []
-    # helt enkelt antal försök spelaren har.
+    #antal försök spelaren har.
     försök = 8
     # Ställ in första gissning som False
     gissning = False
@@ -37,6 +36,7 @@ def spelet():
     #Printar den antal ord i understräck.
     print(len(word) * "_")
     # Loopar tills spelaren har gissat rätt ord eller försök är 0
+
     while gissning == False and försök > 0:
         #berättar hur många försök spelaren har
         print("Du har " + str(försök) + " försök")
